@@ -19,6 +19,7 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    authorize! :manage, @product
   end
 
   def create
@@ -28,11 +29,13 @@ class ProductsController < ApplicationController
   end
 
   def update
+    authorize! :manage, @product
     @product.update(product_params)
     respond_with(@product)
   end
 
   def destroy
+    authorize! :manage, @products
     @product.destroy
     respond_with(@product)
   end
