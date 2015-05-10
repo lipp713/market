@@ -1,0 +1,14 @@
+<div class="col-md-3">
+<div class="thumbnail">
+
+<%= link_to product_path(product) do %>
+<%= image_tag "books.png", class: "img-responsive" %>
+<% end %>
+
+<div class="caption">
+<p><strong><%= link_to product.name, product_path(product) %></strong></p>
+<p>£<%= product.price %></p>
+
+</div>
+</div>
+</div>
