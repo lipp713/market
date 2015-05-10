@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_action :authenticate_user!, only: [:dashboard]
+
   def home
   	#if user_signed_in?
         #    redirect_to backoffice_path
@@ -10,4 +12,9 @@ class PagesController < ApplicationController
 	    redirect_to products_path
 	  end
   end
+
+  def dashboard
+    @products = current_user.products
+  end
+
 end
