@@ -2,7 +2,8 @@
 <div class="thumbnail">
 
 <%= link_to product_path(product) do %>
-<%= image_tag "books.png", class: "img-responsive" %>
+ 
+<%= image_tag product.image.url(:original), class: "img-responsive" %>
 <% end %>
 
 <div class="caption">
