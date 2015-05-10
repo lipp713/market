@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
@@ -21,7 +22,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(product_params)
+    @product = current_user.products.new(product_params)
     @product.save
     respond_with(@product)
   end
