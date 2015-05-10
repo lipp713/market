@@ -1,24 +1,18 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+<div class="col-md-6">
+	<%= image_tag "books.png", class: "img-responsive" %>
+</div>
+	
+<div class="col-md-6">
+	<h3><%= @product.name %></h3>
+	<p><%= @product.description %></p>
+	<h4 class="text=center">£<%= @product.price %></h4>
+</div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
 
-<p>
-  <strong>Availability:</strong>
-  <%= @product.availability %>
-</p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
