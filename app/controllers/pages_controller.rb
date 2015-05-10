@@ -6,8 +6,8 @@ class PagesController < ApplicationController
         #    redirect_to new_user_session_path
         #end
 
-  	#if current_user
-	  #  redirect_to findmember_path
-	  #end
+  	if current_user
+	    redirect_to products_path
+	  end
   end
 end
