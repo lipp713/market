@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150511105442) do
+ActiveRecord::Schema.define(version: 20150511123430) do
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20150511105442) do
     t.string   "seller_email"
     t.integer  "amount"
     t.string   "guid"
-    t.integer  "book_id"
+    t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
