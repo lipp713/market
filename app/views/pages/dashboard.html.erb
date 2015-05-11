@@ -1,40 +1,24 @@
 <div class="row">
 <h1 class="text-center">Dashboard</h1>
+ 
   <div class="col-md-4">
     <h3 class="text-center">
       Products <%= link_to "New Product", new_product_path, class: "btn btn-primary bt-sm"  %>
     </h3>
-    <table class="table">
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Available</th>
-            <th>Price</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-        <% @products.each do |product| %> 
-          <tr>
-            <td><%= product.id %></td>
-            <td><%= link_to product.name, product_path(product) %></td>
-            <td><%= product.availability %></td>
-            <td><%= product.price.to_f / 100 %></td>
-            <td><%= link_to "Edit", edit_product_path(product) %></td>
-          </tr>
-        <% end %>
-        </tbody>
-      </table>
+    <%= render "products" %>
   </div>
+  
   <div class="col-md-4">
     <h3 class="text-center">
       Purchased
     </h3>
+    <%= render "purchased" %>
   </div>
+ 
   <div class="col-md-4">
     <h3 class="text-center">
       Sales
     </h3>
+    <%= render "sales" %>
   </div>
 </div>
