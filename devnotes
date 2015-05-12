@@ -1,0 +1,2 @@
+> rails g migration AddCategoryToProducts category:string
+> rake db:migrate

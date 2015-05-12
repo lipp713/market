@@ -13,5 +13,16 @@ class Product < ActiveRecord::Base
 	validates :image, attachment_presence: true
 
 	validates_numericality_of :price,
-	greater_than: 49, message: "Must be at least 50 pences!"
+	greater_than: 49, message: "Must be at least 50 pences"
+
+	def self.search(search)
+  		if 	search
+   		 	where(['name LIKE ?', "%#{search}%"])
+   		 	#where(['name LIKE ? or description LIKE ?', "%#{search}%", "%#{search}%"])
+   		 	#and availability != "true"
+  		else
+    		all
+  		end
+	end
+
 end
