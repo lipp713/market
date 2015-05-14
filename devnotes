@@ -1,2 +1,12 @@
 > rails g migration AddCategoryToProducts category:string
 > rake db:migrate
+
+
+
+TO IMPLEMENT
+1. Advanced Search
+2. Categories
+3. Categories Edit Restricted to Admin
+4. Change Products to Listings/Orders --> is it necessary?
+5. Translations
+6. New Styling for App

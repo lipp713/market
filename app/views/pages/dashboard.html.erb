@@ -1,24 +1,31 @@
+<div class="container">
 <div class="row">
 <h1 class="text-center">Dashboard</h1>
- 
-  <div class="col-md-4">
-    <h3 class="text-center">
-      Products <%= link_to "New Product", new_product_path, class: "btn btn-primary bt-sm"  %>
-    </h3>
-    <%= render "products" %>
-  </div>
-  
-  <div class="col-md-4">
-    <h3 class="text-center">
-      Purchased
-    </h3>
-    <%= render "purchased" %>
-  </div>
- 
-  <div class="col-md-4">
-    <h3 class="text-center">
-      Sales
-    </h3>
-    <%= render "sales" %>
-  </div>
+<div class="text-center"><%= link_to "New Listing", new_product_path, class: "btn btn-primary btn-sm" %></div>
+<div class="clearfix"></div>
+<div class="col-md-4">
+<div class="dash-box">
+<h4 class="white uppercase">
+Listings
+</h3>
+</div>
+<%= render "products" %>
+</div>
+<div class="col-md-4">
+<div class="dash-box">
+<h4 class="white uppercase">
+Purchased
+</h3>
+</div>
+<%= render "purchased" %>
+</div>
+<div class="col-md-4">
+<div class="dash-box">
+<h4 class="white uppercase">
+Sales
+</h3>
+</div>
+<%= render "sales" %>
+</div>
+</div>
 </div>

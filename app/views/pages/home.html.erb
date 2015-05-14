@@ -1,10 +1,23 @@
-<div class="jumbotron">
-  <h1>CWC Market</h1>
-  <p>Marketplace. Sell your items!</p>
-  <%= link_to "Products", products_path, class: "btn btn-primary btn-lg" %>
-  <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+<div class="background-image">
+
+
+<div class="container">
+
+<div class="col-lg-6 col-lg-offset-3">
+<div class="jumbotron text-center">
+<h2 class="uppercase">Welcome to our store</h2>
+<p>Our latest items. Browse more...</p>
+
+<%= link_to "Browse", products_path, class: "btn btn-primary btn-block" %>
+<%= link_to "Register", new_user_registration_path, class: "btn btn-primary btn-block" %>
 </div>
 
+
+</div>
+<div class="clearfix"></div>
 <div class="row">
 <%= render @products %>
+
+</div>
+</div>
 </div>

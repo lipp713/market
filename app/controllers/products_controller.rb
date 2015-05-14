@@ -5,8 +5,8 @@ class ProductsController < ApplicationController
   respond_to :html
 
   def index
-    #@products = Product.where(availability: true)
-    #respond_with(@products)
+    # @products = Product.where(availability: true)
+    # respond_with(@products)
     @products = Product.search(params[:search])
   end
 

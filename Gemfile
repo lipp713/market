@@ -45,7 +45,15 @@ end
 # gem 'debugger', group: [:development, :test]
 
 
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+# gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+
+gem 'font-awesome-sass', '~> 4.3.0'
+
+gem 'autoprefixer-rails'
+
+gem 'bootstrap-sass', '~> 3.3.1'
+
+
 
 gem 'simple_form'
 

@@ -7,7 +7,7 @@ class PagesController < ApplicationController
 	    redirect_to products_path
 	  end
 
-      @products = Product.last(4)
+      @products = Product.last(8)
   
 
   end
